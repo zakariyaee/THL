@@ -1,0 +1,28 @@
+digraph Automate {
+    rankdir=LR;  // Orientation de gauche à droite
+
+    // Définition des états
+    node [shape = circle]; 0 1 2 3 4;
+    
+    // Définition de l'état initial
+    node [shape = point width =0]start1 ,start2;
+    start1 -> 0;
+    start2 -> 1;
+
+
+    // Définition des états finaux
+    node [shape = point]; final2,final1;
+    3->final1;
+    2->final2;
+
+    
+    
+    // Transitions
+    0 -> 1 [label = "b"];
+    1 -> 2 [label = "a,c"];
+    2 -> 0 [label = "c"];
+    2 -> 1 [label = "c"]; 
+    3 -> 2 [label = "a"];
+    4 -> 3 [label = "b"];
+    0 -> 4 [label = "x"];
+}
