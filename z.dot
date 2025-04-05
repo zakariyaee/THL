@@ -1,0 +1,25 @@
+digraph Automate {
+    rankdir=LR;  // Orientation de gauche à droite
+
+      node [shape = circle]; 0 1 2 3 1001 1002 6 7;
+
+       node [shape = point width =0] start6;
+    start6 -> 6;
+
+       node [shape = point]; final7;
+    7 -> final7;
+
+    // Transitions
+    1002 -> 1001 [label = "ε"];
+    6 -> 7 [label = "ε"];
+    1002 -> 7 [label = "ε"];
+    6 -> 1001 [label = "ε"];
+    1 -> 0 [label = "ε"];
+    0 -> 1 [label = "a"];
+    3 -> 2 [label = "ε"];
+    2 -> 3 [label = "b"];
+    1001 -> 0 [label = "ε"];
+    1001 -> 2 [label = "ε"];
+    1 -> 1002 [label = "ε"];
+    3 -> 1002 [label = "ε"];
+}

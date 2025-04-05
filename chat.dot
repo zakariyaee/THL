@@ -1,0 +1,25 @@
+digraph Automate {
+    rankdir=LR;  // Orientation de gauche à droite
+
+    // Définition des états
+    node [shape = circle]; 1 2 3 4 5;
+
+    // Définition de l'état initial
+    node [shape = point width=0]; start, start1, start2;
+    start -> 1;
+    start1 -> 2;
+    start2 -> 3;
+
+    // Définition des états finaux
+    node [shape = point]; final, final1;
+    4 -> final;
+    5 -> final1;
+
+    // Transitions
+    1 -> 2 [label = "x"];
+    2 -> 3 [label = "y"];
+    4 -> 3 [label = "x"];
+    3 -> 1 [label = "x,m,p"];
+    2 -> 5 [label="z"];
+    3 -> 4 [label="z"];
+}

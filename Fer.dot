@@ -1,0 +1,30 @@
+digraph {
+rankdir=LR;
+
+
+node [shape = circle]; 0 1 2 3 4;
+
+
+node [shape = point width =0]start , start1, start2;
+start -> 0;
+start1 -> 1;
+start2 -> 2;
+
+
+
+
+
+
+node [shape = point]; final,final1;
+4->final;
+0->final1;
+
+
+
+0 -> 1 [label="a"];
+2 -> 4 [label="b"];
+3 -> 1 [label="c"];
+1 -> 0 [label="d"];
+2 -> 2 [label="a"];
+4 -> 3 [label="c"];
+}
